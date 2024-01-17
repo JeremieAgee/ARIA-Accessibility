@@ -6,6 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Welcome</h1>
+        <!-- I used the role navigation here because the anchor navigates to another portion of the page -->
+        <nav role="navigation">
+            <ul>
+                <li>
+                    <a href="#h2-aria">Aria Description</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- I used a label here because the input has no title for the screen reader and no visible text to label it -->
+        <input type="search" id="search" aria-label="Page Search">
+    </header>
+    <main>
+        <!--I used hidden here to show that the text bellow wouldn't by screen readers  -->
+        <div aria-hidden="true" style="margin-bottom: 75vh">
+        <p>This is text that should be hidden from screen readers and they should not read this section.</p>
+        </div>
+        <h2 id="h2-aria">Aria Description</h2>
+        <!--The aria tag bellow was used because the label is already on the page so you use labeled by here -->
+        <p aria-labelledby="h2-aria">Aria is an accessible rich interactive application. They make it easier for machines to read the dom and provide information to help screen readers. This is good for people with disabilities like sight to be able to understand your web application better.</p>
+    </main>
 </body>
 </html>
